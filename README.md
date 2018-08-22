@@ -8,7 +8,9 @@
 
 * MySql
 
-* thymeleaf/CSS
+* Thymeleaf/CSS
+
+* Dynamic webpage 
 
 ## Summery 
 
