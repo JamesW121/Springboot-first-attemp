@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+        <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
+        <meta charset="UTF-8"/>
+        <title>All</title>
+        <style>
+
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+            
+            
+    .butt
+    {
+        border:solid 5px #CCE8EB;
+        border-radius:10px 20px 20px 10px;
+    }  
+            
+        </style>
+    </head>
+
+    <body>
+
+            <table class="table table-hover table-condensed">
+                <center><h3>Summery</h3></center>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Value</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="first : ${firstList}">
+                        <th scope="row" th:text="${first.id}"></th>
+                        <td><a th:href="@{/aa/{Id}(Id=${first.id})}" th:text="${first.name}"></a></td>
+                        <td th:text="${first.value}"></td>
+                        <td><a class="butt" th:href="@{/aaa/{Id}(Id=${first.id})}">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        <br><br>
+            <div><center><a class="butt" href="/a" role="button">Create</a></center></div>
+
+    </body>
+</html>

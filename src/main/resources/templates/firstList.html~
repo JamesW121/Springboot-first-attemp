@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+        <link th:href="@{https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/default.css}" rel="stylesheet"/>
+        <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
+        <meta charset="UTF-8"/>
+        <title>总列表</title>
+        <style>
+        .cent{
+        }
+        
+        </style>
+    </head>
+
+    <body>
+
+        <div class="contentDiv">
+
+<div class = "cent">
+            <table class="table table-hover table-condensed">
+                <legend>
+                    <center><strong>总列表</strong></center>
+                </legend>
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>值</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="first : ${firstList}">
+                        <th scope="row" th:text="${first.id}"></th>
+                        <td><a th:href="@{/aa/{Id}(Id=${first.id})}" th:text="${first.name}"></a></td>
+                        <td th:text="${first.value}"></td>
+                        <td><a class="btn btn-danger" th:href="@{/aaa/{Id}(Id=${first.id})}">删除</a></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
+            <div><center><a class="btn btn-primary" href="/a" role="button">创建</a></center></div>
+        </div>
+
+    </body>
+</html>
