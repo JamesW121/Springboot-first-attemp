@@ -4,7 +4,7 @@
         <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
         <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
         <meta charset="UTF-8"/>
-        <title>All</title>
+        <title>Summery</title>
         <style>
 
         table
@@ -15,14 +15,14 @@
         }
         table td, table th
         {
-            border: 1px solid #cad9ea;
+            border: 1px solid #e2ddba;
             color: #666;
             height: 30px;
         }
         table thead th
         {
-            background-color: #CCE8EB;
-            width: 100px;
+            background-color: #b9ad57;
+            width: 200px;
         }
         table tr:nth-child(odd)
         {
@@ -34,11 +34,23 @@
         }
             
             
-    .butt
-    {
-        border:solid 5px #CCE8EB;
-        border-radius:10px 20px 20px 10px;
-    }  
+.butt {
+  display: inline-block;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;   
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #bcb05c;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px #D3cc96;
+}
+
+.butt:hover {background-color: #D3cc96}
+
             
         </style>
     </head>
@@ -46,7 +58,7 @@
     <body>
 
             <table class="table table-hover table-condensed">
-                <center><h3>Summery</h3></center>
+                <center><h2>Summery</h2></center>
                 <thead>
                     <tr>
                         <th>ID</th>
